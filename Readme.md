@@ -1,105 +1,73 @@
-\# 📚 Multi-PDF RAG Chatbot using LLaMA 3 (Local)
+# 🧠 Multi-PDF RAG Chatbot using LLaMA 3
 
-
-
-This is a simple GenAI project that lets you \*\*chat with multiple PDFs\*\* using a \*\*locally hosted LLaMA 3 model\*\* via Ollama. It performs \*\*PDF text extraction, embedding with FAISS\*\*, and uses \*\*LangChain RetrievalQA\*\* for intelligent question-answering — all offline!
-
-
-
-!\[Output Screenshot](output.png)
-
-
+This project is a local **RAG (Retrieval-Augmented Generation)** chatbot that can read and answer questions from multiple PDF files using **LLaMA 3** running on **Ollama**, without needing OpenAI API keys.
 
 ---
 
+## ✅ Features
 
-
-\## 🛠️ Tech Stack
-
-
-
-\- Python 3.10  
-
-\- \[LangChain](https://github.com/langchain-ai/langchain)  
-
-\- \[Ollama](https://ollama.com/) with `llama3` model  
-
-\- FAISS (for vector search)  
-
-\- PyMuPDF (`fitz`) for PDF text extraction  
-
-\- `.env` for model config
-
-
+- 📄 Accepts multiple PDFs as knowledge base
+- 🧩 Splits text into chunks for better context handling
+- 📦 Uses FAISS for vector storage and semantic retrieval
+- 🤖 Uses local **LLaMA 3** model for inference via **Ollama**
+- 🔁 Chat loop interface to interact with the data
 
 ---
 
+## 🛠️ Tech Stack
 
+- Python
+- LangChain
+- Ollama (LLaMA 3)
+- FAISS
+- PyMuPDF
+- dotenv
 
-\## 🚀 How to Run
+---
 
+## 🧪 How to Run
 
+1. **Install Ollama & pull model**
+   ```
+   ollama run llama3
+   ```
 
-1\. ✅ Make sure you have `ollama` installed and running locally:
+2. **Install dependencies**
+   ```
+   pip install -r requirements.txt
+   ```
 
+3. **Add PDF files to `data/` folder**
+   ```
+   📁 data/
+   ├── resume.pdf
+   └── data.pdf
+   ```
 
+4. **Run the chatbot**
+   ```
+   python app.py
+   ```
 
-&nbsp;  ollama run llama3
+---
 
+## 🖼️ Sample Output
 
+![Bot Output](output.png)
 
-✅ Install dependencies:
+---
 
+## 🚀 Future Enhancements
 
+- Build a **web-based interface** using Streamlit or Flask
+- Add a **file upload** feature for dynamic PDF processing
+- Integrate **embedding caching** to avoid recomputation
+- Optionally serve as a **local personal assistant bot**
 
-pip install -r requirements.txt
+---
 
+## 🧠 Credits
 
-
-✅ Place your PDFs in the data/ folder.
-
-
-
-✅ Run the app:
-
-python app.py
-
-
-
-
-
-\##💬 Ask questions about the PDFs!
-
-
-
-\##🔮 Future Enhancements:
-
-
-🌐 Web Interface using Flask / Streamlit
-
-
-
-⚡ Fast embeddings using InstructorXL, BGE, or GGUF models
-
-
-
-🔁 Support live PDF uploads
-
-
-
-🤝 Integrate with Chat history and memory
-
-
-
-📦 Dockerize and deploy on GCP / AWS for scalable use
-
-
-
-🧠 Add summarization, keyword extraction, and PDF insights as tools
-
-##👨‍💻 Developed by
-
-Guru Sai Sashank
-
-Built as part of a GenAI portfolio.
+- Built using [LangChain](https://github.com/langchain-ai/langchain)
+- Embeddings and LLMs via [Ollama](https://ollama.com)
 
