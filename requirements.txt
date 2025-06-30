@@ -1,0 +1,8 @@
+langchain==0.3.26
+langchain-core==0.3.66
+langchain-experimental==0.3.4
+langchain-community==0.3.26
+langchain-ollama==0.3.3
+faiss-cpu==1.7.4
+PyMuPDF==1.24.1
+python-dotenv==1.0.1
